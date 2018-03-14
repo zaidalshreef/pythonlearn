@@ -14,7 +14,7 @@ def  main():
     amont=input("enter intger : ")
 
     print(amont,type(amont))
-    #changig the type of the input from string into int
+    #changing the type of the input from string to int
     amont=int(amont)
 
     print(amont, type(amont))
