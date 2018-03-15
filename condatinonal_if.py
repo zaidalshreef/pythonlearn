@@ -4,16 +4,21 @@ def  main():
      n = True
      while(n):
          age = input("enter your age or enter 0 to exit : ")
-         if(int(age)>18):
+         try:
+          if(int(age)>=18):
             print("welcome")
-         elif(int(age)>15):
+          elif(int(age)>15 and int(age)<18):
               print("hi")
-         elif(int(age)>10):
+          elif(int(age)>10):
             print("not welcome")
-         elif(int(age)>0):
+          elif(int(age)>0 and int(age)<=10):
             print(" you a kid")
-         else:
-             n=False
+          else:
+              n=False
+         except:
+             print("error")
+
+
 
 
 
