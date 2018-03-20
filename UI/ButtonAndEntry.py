@@ -20,5 +20,4 @@ def buclick():
 bu1.config(command=buclick)
 
 
-
 root.mainloop()
