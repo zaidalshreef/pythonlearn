@@ -12,7 +12,6 @@ bu1=ttk.Button(root,text="get text")
 bu1.pack()
 bu1.config(image=resize,compound=CENTER)
 
-
 def buclick():
     print(entry.get())
     entry.delete(0,END)
