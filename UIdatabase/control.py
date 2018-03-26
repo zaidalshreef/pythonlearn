@@ -6,6 +6,13 @@ from  UIListRequst import ListTicket
 
 dbConnect=DBConnect()
 root=Tk()
+root.configure(background="#e1d8b2")
+style=ttk.Style(root)
+print(style.theme_names())
+style.theme_use('classic')
+style.configure('Tlabel',background="#e1d8b2")
+style.configure('TButton',background="#e1d8b2")
+style.configure('TRadiobutton',background="#e1d8b2")
 root.title("Ticket reservation")
 #full name
 ttk.Label(root,text="full name :").grid(row=0,column=0,padx=10,pady=10)
@@ -31,6 +38,7 @@ def BuSubmit():
     print("Full name: {}".format(fullname.get()))
     print(" gender: {}".format(gender.get()))
     print(" comment : {}".format(coment.get(1.0,'end')))
+    print(coment.get(1.0,'end'))
     mag=dbConnect.add(fullname.get(),gender.get(),coment.get(1.0,'end'))
     messagebox.showinfo(title='info',message=mag)
     fullname.delete(0,'end')

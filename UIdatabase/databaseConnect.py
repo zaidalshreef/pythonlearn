@@ -15,6 +15,19 @@ class DBConnect:
     def ListRequst(self):
         cursor=self.DB.execute("Select * from Ticket")
         return cursor
+
+
+    def deleteRecord(self,id):
+        self.DB.execute("delete from Ticket where ID=:ID",{'ID':id})
+        self.DB.commit()
+        return "Record is deleted"
+
+    def UpdateRecord(self,id,comment):
+        self.DB.execute("update Ticket set Comment=:Comment where ID=:ID ",{'Comment':comment,'ID':id})
+        self.DB.commit()
+        return "Record is updated"
+
+
     
 
 
