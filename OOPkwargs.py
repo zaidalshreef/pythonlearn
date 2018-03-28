@@ -7,7 +7,7 @@ class car:
     def setmodel(self,model):
         self.data["model"] = model
     def getmodel(self):
-        print(" model : {}".format((self.data["model"])))
+        print(" model : {[model]}".format(self.data))
 def  main():
     mycar = car(owner="zaid",model="corvet",year=2018,price=2012220,speed=300)
     mycar.get()
